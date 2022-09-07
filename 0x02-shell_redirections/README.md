@@ -1,1 +1,1 @@
-a confusde smiley script
+a cript printing out two files
