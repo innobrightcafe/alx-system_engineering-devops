@@ -7,21 +7,23 @@
  * @c: third integer
  * Return: largest number
  */
-int main()
+
+int largest_number(int a, int b, int c)
 {
-    
-    int a, b, c;
-    printf("972,-98,0\n");
-    scanf("%d %d %d", &a, &b, &c);
-    
-    if (a > b && a > c) {
-        printf("%d is Greater",a);
+    int largest;
+
+    if (a >= b && a >= c)
+    {
+        largest = a;
     }
-    else if (b > a && b > c) {
-        printf("%d is Greater",b);
+    else if (b >= a && b >= c)
+    {
+        largest = b;
     }
-    else{
-        printf("%d is Greater"d);
-    } 
-    return 0;
+    else
+    {
+        largest = c;
+    }
+
+    return (largest);
 }
