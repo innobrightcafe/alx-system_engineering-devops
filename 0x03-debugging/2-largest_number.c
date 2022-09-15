@@ -11,7 +11,7 @@ int main()
 {
     
     int a, b, c;
-    printf("Enter 3 numbers\n");
+    printf("972,-98,0\n");
     scanf("%d %d %d", &a, &b, &c);
     
     if (a > b && a > c) {
