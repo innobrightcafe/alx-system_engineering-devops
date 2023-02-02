@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+output=$(ss -lnp)
+
+while read -r line; do
+  # Check if the line starts with 'LISTEN'
+  if [[ $line == LISTEN* ]]; then
+    # Extract the port number, PID, and program name from the line
+    port=$(echo $line | awk '{print $4}' | cut -d: -f2)
+    pid=$(echo $line | awk '{print $6}' | cut -d/ -f1)
+    program=$(echo $line | awk '{print $7}')
+
+    # Print the port number, PID, and program name
+    echo "Port: $port PID: $pid Program: $program"
+  fi
+done <<< "$output"

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+#Check if an argument was passed
+if [ $# -eq 0 ]; then
+  echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+  exit 1
+fi
+
+# Store the IP address passed as an argument in a variable
+ip_address=$1
+
+# Ping the IP address 5 times
+for i in {1..5}; do
+  ping -c 1 $ip_address &> /dev/null
+  if [ $? -eq 0 ]; then
+    echo "$ip_address is reachable."
+  else
+    echo "$ip_address is unreachable."
+  fi
+done
