@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Generate RSA key pair with 4096 bits and passphrase protection
 openssl genrsa -aes256 -out school.key 4096
