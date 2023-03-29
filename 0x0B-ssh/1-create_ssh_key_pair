@@ -3,5 +3,4 @@
 openssl genrsa -aes256 -out school.key 4096
 # Extract the public key from the private key
 openssl rsa -in school.key -out school.pub -outform PEM -pubout
-
 echo "RSA key pair created successfully"
