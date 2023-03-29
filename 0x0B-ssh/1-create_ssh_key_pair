@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Generate RSA key pair with 4096 bits and passphrase protection
-openssl genrsa -aes256 -out school.key 4096
-openssl rsa -in school.key -out school.pub -outform PEM -pubout
-echo "RSA key pair created successfully"
+# Creates RSA key pair
+
+ssh-keygen -b 4096 -f school -t rsa -N betty
