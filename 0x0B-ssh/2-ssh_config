@@ -1,4 +1,5 @@
+#!/usr/bin/env bash
 # ssh config file
 Host *
-      PasswordAuthentication no
-      IdentifyFile ~/.ssh/school
+      PasswordAuthentication yes
+      IdentifyFile ~/.ssh/id_rsa
